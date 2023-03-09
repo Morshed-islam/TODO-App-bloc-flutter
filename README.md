@@ -20,6 +20,40 @@ This app requires the following dependencies:
 These dependencies can be installed by running the following command in your terminal:
 
 
+### Running the App
+
+Once you have installed the dependencies, you can run the app on your device or emulator by running the following command in your terminal:
+
+This will launch the app on your device or emulator and you can start using it immediately.
+
+## Features
+
+This app allows you to create and manage your ToDo list. You can perform the following actions:
+
+- Add a new task to your list
+- Edit an existing task
+- Mark a task as complete
+- Delete a task
+- View all tasks
+- View only completed tasks
+- View only incomplete tasks
+
+The app also stores your tasks locally on your device using SQFLite and Shared Preferences. This means that your tasks will persist even if you close the app or restart your device.
+
+## Architecture
+
+This app uses the BLoC (Business Logic Component) architecture for state management. The app is divided into three main components:
+
+- `ui`: This component handles all of the UI logic and user interactions.
+- `bloc`: This component implements the BLoC design pattern and handles all of the app's business logic and state management.
+- `repository`: This component handles data storage and retrieval using SQFLite and Shared Preferences.
+
+The BLoC component communicates with the UI component using `Stream`s, allowing the UI to update in real-time based on changes to the app's state.
+
+## Conclusion
+
+This ToDo app is a simple but powerful tool for managing your daily tasks. It uses the latest technologies and best practices in Flutter and Dart development, including the BLoC architecture, SQFLite, and Shared Preferences. We hope you find it useful and welcome any feedback or contributions.
+
 Follow me :
 
 <div id="badges">
