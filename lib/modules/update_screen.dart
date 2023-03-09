@@ -28,10 +28,9 @@ class UpdateScreen extends StatelessWidget {
         title: Text('${model['title']}'),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.archive_outlined,
-              ))
+            onPressed: () {},
+            icon: const Icon(Icons.archive_outlined),
+          )
         ],
       ),
       body: Column(
@@ -75,7 +74,7 @@ class UpdateScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Container(
               width: double.infinity,
-              height: 240.0,
+              height: 260.0,
               // color: Colors.green,
               child: Text(
                 '${model['description']},',
@@ -86,7 +85,7 @@ class UpdateScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 3,
             child: Container(
               color: color4,
               child: Row(
@@ -96,6 +95,7 @@ class UpdateScreen extends StatelessWidget {
                     Icons.add_alert_outlined,
                     color: color1,
                   ),
+                  // the time and the date
                   Text(
                     '${model['time']}' + '  ${model['date']}',
                     style: const TextStyle(

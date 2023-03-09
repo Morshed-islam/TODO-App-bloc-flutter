@@ -223,7 +223,8 @@ class HomeLayout extends StatelessWidget {
                                                     ),
                                                     title: Text(
                                                       translator.translate(
-                                                          "ImageGallery"),
+                                                        "ImageGallery",
+                                                      ),
                                                       style: const TextStyle(
                                                         color: Colors.white,
                                                         fontSize: 17.0,

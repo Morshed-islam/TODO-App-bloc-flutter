@@ -19,16 +19,15 @@ class AppCubit extends Cubit<AppStates> {
   File? imageFile;
   final ImagePicker picker = ImagePicker();
   Future getImage(ImageSource sor) async {
-    emit(UploadeImage());
     final pickedImage = await picker.getImage(source: sor);
     if (pickedImage != null) {
       imageFile = File(pickedImage.path);
-      print(imageFile);
-      print(pickedImage);
+      // print(imageFile);
+      // print(pickedImage);
     } else {
       print('Not fond image');
-      //emit(UploadeImage());
     }
+    emit(UploadeImage());
   }
 
   // for bottom vavigation
@@ -51,7 +50,6 @@ class AppCubit extends Cubit<AppStates> {
   }
 
   // change in the icon and the ............
-
   bool isBottomSheetShow = false;
   IconData fabIcon = Icons.edit;
 
@@ -65,6 +63,7 @@ class AppCubit extends Cubit<AppStates> {
   }
 
   //s--------------Database---------------//
+
   List<Map> newTasks = [];
   List<Map> doneTasks = [];
   List<Map> archiveTasks = [];
